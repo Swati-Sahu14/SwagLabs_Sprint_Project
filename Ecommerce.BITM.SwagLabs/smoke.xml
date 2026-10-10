@@ -3,7 +3,7 @@
 
 <suite name="SmokeSuite">
 
-	<test name="SmokeTests">
+	<test name="Smoke Testing">
 	    <groups>
             <run>
                 <include name="SM"/>
