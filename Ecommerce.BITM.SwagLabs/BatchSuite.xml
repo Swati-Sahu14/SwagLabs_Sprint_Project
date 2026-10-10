@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="ecomSwagLabsHome.HomeSmoke_Test"/>
+      <class name="ecomSwagLabsLogin.LoginWithValidCredentials_Test"/>
+      <class name="ecomSwagLabsCheckout.CheckoutIntegrationTest"/>
+      <class name="ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test"/>
+      <class name="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+      <class name="ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test"/>
+      <class name="ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test"/>
+      <class name="ecomSwagLabsLogin.LoginLogout_Test"/>
+      <class name="ecomSwagLabsLogin.LoginWithInvalidCredentials_Test"/>
+      <class name="ecomSwagLabsCart.CartFunctional_Test"/>
+      <class name="ecomSwagLabsCart.CartSmoke_Test"/>
+      <class name="ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test"/>
+      <class name="ecomSwagLabsHome.HomeFunctional_Test"/>
+      <class name="ecomSwagLabsCart.CartIntegration_Test"/>
+      <class name="ecomSwagLabsHome.HomeSystem_Test"/>
+      <class name="ecomSwagLabsCheckout.CheckoutSmoke_Test"/>
+      <class name="ecomSwagLabsCart.CartSystem_Test"/>
+      <class name="ecomSwagLabsCheckout.CheckoutSystem_Test"/>
+      <class name="ecomSwagLabsHome.HomeIntegration_Test"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
