@@ -14,10 +14,10 @@ public class CartSmoke_Test extends BaseClass {
 	@Test(priority=1,groups = {"SM", "Pos"})
     public void cartSmokeTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();;
         h.getCart();
-        CartPage cp = new CartPage(d);
+        CartPage cp = new CartPage(driver);
         cp.verifyProductsInCart();
         logout();
 	}
@@ -26,9 +26,9 @@ public class CartSmoke_Test extends BaseClass {
 	@Test(priority=2,groups = {"SM", "Neg"})
     public void verifyCartWithoutLogin() throws Exception {
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.verifyCartRequiresLogin();
 
-        ScreenshotUtility.takeScreenshot(d, "Cart_WithoutLogin");
+        ScreenshotUtility.takeScreenshot(driver, "Cart_WithoutLogin");
     }
 }

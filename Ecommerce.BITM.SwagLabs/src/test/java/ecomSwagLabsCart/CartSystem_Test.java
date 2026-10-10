@@ -13,10 +13,10 @@ public class CartSystem_Test extends BaseClass {
 	@Test(priority = 1, groups = {"ST", "Pos"})
     public void completeCartFlow() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();;
         h.getCart();
-        CartPage cp = new CartPage(d);
+        CartPage cp = new CartPage(driver);
         cp.verifyProductsInCart();
         cp.getRemovebtn();
         cp.verifyProductRemoved();
@@ -32,10 +32,10 @@ public class CartSystem_Test extends BaseClass {
         login();
         logout();
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.verifyCartRequiresLogin();
 
-        ScreenshotUtility.takeScreenshot(d, "Cart_AfterLogout");
+        ScreenshotUtility.takeScreenshot(driver, "Cart_AfterLogout");
     }
 
     //Verify that a removed product remains absent after refresh.
@@ -44,11 +44,11 @@ public class CartSystem_Test extends BaseClass {
 
         login();
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
 
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getRemovebtn();
         c.verifyProductRemoved();
         c.refreshAndVerifyCartEmpty();

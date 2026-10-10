@@ -20,16 +20,16 @@ public class CheckoutSystem_Test extends BaseClass {
     public void orderProductTest() throws Exception {
 
         login();
-        HomePage home = new HomePage(d);
+        HomePage home = new HomePage(driver);
         home.getTitle();
         home.getAddItemToCart();
         home.getCart();
 
-        CartPage cart = new CartPage(d);
+        CartPage cart = new CartPage(driver);
         cart.getProductName();
         cart.getCheckoutbtn();
 
-        CheckoutPage cop = new CheckoutPage(d);
+        CheckoutPage cop = new CheckoutPage(driver);
 
         cop.getFn(PropertyFileUtility.getDataFromProperty("FirstName"));
         cop.getLn(PropertyFileUtility.getDataFromProperty("LastName"));
@@ -38,11 +38,11 @@ public class CheckoutSystem_Test extends BaseClass {
         cop.getContinuebtn();
         cop.verifyContinuebtn();
 
-        OverviewPage overview = new OverviewPage(d);
+        OverviewPage overview = new OverviewPage(driver);
         overview.getSummary();
         overview.getFinishbtn();
 
-        CompletePage complete = new CompletePage(d);
+        CompletePage complete = new CompletePage(driver);
         complete.getOrderTitle();
         complete.getMessage();
         complete.getBackToHomebtn();
@@ -57,18 +57,18 @@ public class CheckoutSystem_Test extends BaseClass {
     public void incompleteOrderMustNotComplete() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getCheckoutbtn();
-        CheckoutPage cop = new CheckoutPage(d);
+        CheckoutPage cop = new CheckoutPage(driver);
         cop.getFn("TestUser");
         cop.getContinuebtn();
         String errorMessage = cop.getErrorMessage();
         Assert.assertTrue(errorMessage.contains("Last Name is required"),"Missing Last Name was not rejected");
-        Assert.assertFalse(d.getCurrentUrl().contains("checkout-complete.html"),"Incomplete order reached the completion page");
+        Assert.assertFalse(driver.getCurrentUrl().contains("checkout-complete.html"),"Incomplete order reached the completion page");
         Reporter.log("Incomplete checkout information rejected successfully", true);
-        ScreenshotUtility.takeScreenshot(d, "Checkout_IncompleteInfo");
+        ScreenshotUtility.takeScreenshot(driver, "Checkout_IncompleteInfo");
     }
 }

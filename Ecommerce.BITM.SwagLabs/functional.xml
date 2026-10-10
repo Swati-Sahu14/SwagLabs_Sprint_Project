@@ -3,6 +3,7 @@
 
 <suite name="FunctionalSuite">
     <test name="FunctionalTests">
+    
     		<groups>
             <run>
                 <include name="FT"/>

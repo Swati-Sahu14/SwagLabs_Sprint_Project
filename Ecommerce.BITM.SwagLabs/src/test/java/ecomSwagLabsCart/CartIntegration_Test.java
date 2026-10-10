@@ -20,11 +20,11 @@ public class CartIntegration_Test extends BaseClass {
 	@Test(priority = 1, groups = {"IT", "Pos"})
 	public void ProductInCart() throws Exception {
 		login();
-	    HomePage h = new HomePage(d);
+	    HomePage h = new HomePage(driver);
         String homeProduct = h.getHomeProductName();
         h.getAddItemToCart();
 	    h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
 	    String cartProduct = c.getProductName();
 	    Assert.assertEquals(cartProduct,homeProduct,"Home Page product and Cart product are different");
 	    Reporter.log("Both product names are same", true);
@@ -34,10 +34,10 @@ public class CartIntegration_Test extends BaseClass {
 	@Test(priority = 2, groups = {"IT", "Pos"})
     public void cartToProductTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();;
         h.getCart();
-        CartPage cp = new CartPage(d);
+        CartPage cp = new CartPage(driver);
         cp.getContinueShopping();;
         h.getTitle();
         logout();
@@ -48,13 +48,13 @@ public class CartIntegration_Test extends BaseClass {
     public void addProductToAllItem() throws Exception
     {
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();;
         h.getCart();
-        CartPage cp = new CartPage(d);
+        CartPage cp = new CartPage(driver);
         cp.verifyProductsInCart();
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getallItems();
         h.getTitle();
     }
@@ -63,13 +63,13 @@ public class CartIntegration_Test extends BaseClass {
 	@Test(priority = 4, groups = {"IT", "Pos"})
     public void addproductToDynamicCatalog() throws Exception{
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();;
         h.getCart();
-        CartPage cp = new CartPage(d);
+        CartPage cp = new CartPage(driver);
         cp.verifyProductsInCart();
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getLazyLoad();
         h.getMenubar();
@@ -86,24 +86,24 @@ public class CartIntegration_Test extends BaseClass {
 
         login();
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
 
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         String productName = c.getProductName();
 
         c.getRemovebtn();
         c.verifyProductRemoved();
         c.getCheckoutbtn();
 
-        CheckoutPage cop = new CheckoutPage(d);
+        CheckoutPage cop = new CheckoutPage(driver);
         cop.getFn(PropertyFileUtility.getDataFromProperty("FirstName"));
         cop.getLn(PropertyFileUtility.getDataFromProperty("LastName"));
         cop.getPCode(PropertyFileUtility.getDataFromProperty("Zip_code"));
         cop.getContinuebtn();
 
-        OverviewPage op = new OverviewPage(d);
+        OverviewPage op = new OverviewPage(driver);
         op.verifyRemovedProductNotInOverview(productName);
     }
 

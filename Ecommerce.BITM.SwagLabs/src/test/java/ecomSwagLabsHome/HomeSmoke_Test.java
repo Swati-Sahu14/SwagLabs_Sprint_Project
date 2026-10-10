@@ -12,17 +12,17 @@ public class HomeSmoke_Test extends BaseClass {
     @Test(priority = 1, groups = {"SM", "Pos"})
     public void verifyHomePageLoads() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getTitle();
         h.getProducts();
-        Assert.assertTrue(d.getCurrentUrl().contains("inventory.html"),"Home page did not load");
+        Assert.assertTrue(driver.getCurrentUrl().contains("inventory.html"),"Home page did not load");
         logout();
     }
     
     // Verify that inventory cannot be accessed without login.
     @Test(priority = 2, groups = {"SM", "Neg"})
     public void verifyInventoryRequiresLogin() {
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.verifyInventoryRequiresLogin();
     }
 

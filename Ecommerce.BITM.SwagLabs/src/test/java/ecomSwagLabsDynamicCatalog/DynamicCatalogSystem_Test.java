@@ -11,9 +11,9 @@ public class DynamicCatalogSystem_Test extends BaseClass {
 	@Test(priority=1,groups = {"ST", "Pos"})
     public void completeDynamicCatalogFlow() throws Exception {
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getLazyLoad();
         h.getMenubar();
@@ -34,10 +34,10 @@ public class DynamicCatalogSystem_Test extends BaseClass {
 
 	        login();
 
-	        HomePage h = new HomePage(d);
+	        HomePage h = new HomePage(driver);
 	        h.getMenubar();
 
-	        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+	        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
 	        dp.getDynamicCatalog();
 	        dp.getLazyLoad();
 
@@ -51,7 +51,7 @@ public class DynamicCatalogSystem_Test extends BaseClass {
 	        login();
 	        logout();
 
-	        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+	        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
 	        dp.verifyCatalogAccessAfterLogout();
 	    }
 

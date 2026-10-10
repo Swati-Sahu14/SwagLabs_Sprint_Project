@@ -13,7 +13,7 @@ public class HomeFunctional_Test extends BaseClass {
 	public void verifyHomePageByMenuList() throws Exception {
 
 		login();
-		HomePage h = new HomePage(d);
+		HomePage h = new HomePage(driver);
 		h.getTitle();
 		h.getProducts();
 		h.getMenubar();
@@ -25,7 +25,7 @@ public class HomeFunctional_Test extends BaseClass {
 	@Test(priority = 2,groups = {"FT", "Pos"})
     public void removeProductTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getRemovePrd();
         h.verifyRemovePrd();
     }
@@ -34,7 +34,7 @@ public class HomeFunctional_Test extends BaseClass {
 	@Test(priority = 3,groups = {"FT", "Pos"})
     public void verifyAddAllProducts() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.addAllProductsToCart();
         h.verifyProductsAdded();
         logout();
@@ -45,9 +45,9 @@ public class HomeFunctional_Test extends BaseClass {
     public void verifyRemoveButtonState() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.verifyRemoveButtonBeforeAdding();
-        ScreenshotUtility.takeScreenshot(d, "RemoveButton_NotDisplayed");
+        ScreenshotUtility.takeScreenshot(driver, "RemoveButton_NotDisplayed");
         logout();
     }
 
@@ -56,9 +56,9 @@ public class HomeFunctional_Test extends BaseClass {
     public void verifyProductsNotMissing() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getProducts();
-        ScreenshotUtility.takeScreenshot(d, "Products_Displayed");
+        ScreenshotUtility.takeScreenshot(driver, "Products_Displayed");
         logout();
     }
 	
@@ -66,9 +66,9 @@ public class HomeFunctional_Test extends BaseClass {
 		@Test(priority = 6,groups = {"FT", "Neg"})
 		public void verifyRemoveButtonState1() throws Exception {
 			 login();
-		        HomePage h = new HomePage(d);
+		        HomePage h = new HomePage(driver);
 		        h.verifyRemoveButtonBeforeAdding();
-		        ScreenshotUtility.takeScreenshot(d, "RemoveButton_NotDisplayed");
+		        ScreenshotUtility.takeScreenshot(driver, "RemoveButton_NotDisplayed");
 		        logout();
 	    }
 
@@ -76,9 +76,9 @@ public class HomeFunctional_Test extends BaseClass {
 		@Test(priority = 7,groups = {"FT", "Neg"})
 	 public void verifyProductsWithoutLogin() throws Exception {
 			login();
-	        HomePage h = new HomePage(d);
+	        HomePage h = new HomePage(driver);
 	        h.getProducts();
-	        ScreenshotUtility.takeScreenshot(d, "Products_Displayed");
+	        ScreenshotUtility.takeScreenshot(driver, "Products_Displayed");
 	        logout();
 
 	 }

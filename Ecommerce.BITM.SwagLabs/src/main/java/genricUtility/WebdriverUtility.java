@@ -19,9 +19,7 @@ public class WebdriverUtility {
         }
 
         browser = browser.trim();
-
         WebDriver driver;
-
         if (browser.equalsIgnoreCase("chrome")) {
 
             ChromeOptions settings = new ChromeOptions();

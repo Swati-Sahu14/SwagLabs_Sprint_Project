@@ -19,12 +19,12 @@ public class CheckoutIntegrationTest extends BaseClass {
     // Navigate from Home to Checkout Information.
     private CheckoutPage navigateToCheckout() throws Exception {
 
-        HomePage home = new HomePage(d);
+        HomePage home = new HomePage(driver);
         home.getAddItemToCart();
         home.getCart();
-        CartPage cart = new CartPage(d);
+        CartPage cart = new CartPage(driver);
         cart.getCheckoutbtn();
-        return new CheckoutPage(d);
+        return new CheckoutPage(driver);
     }
 
     // Enter valid checkout details and navigate to Overview.
@@ -36,14 +36,14 @@ public class CheckoutIntegrationTest extends BaseClass {
         checkout.getContinuebtn();
         checkout.verifyContinuebtn();
 
-        return new OverviewPage(d);
+        return new OverviewPage(driver);
     }
 
     // Complete checkout and reach the confirmation page.
     private CompletePage completeOrder() throws Exception {
         OverviewPage overview = navigateToOverview();
         overview.getFinishbtn();
-        return new CompletePage(d);
+        return new CompletePage(driver);
     }
 
     // Verify that the selected product remains the same in Cart.
@@ -51,17 +51,17 @@ public class CheckoutIntegrationTest extends BaseClass {
     public void verifyHomeToCartProductConsistencyTest() throws Exception {
 
         login();
-        HomePage home = new HomePage(d);
+        HomePage home = new HomePage(driver);
         String homeProduct = home.getHomeProductName();
         home.getAddItemToCart();
         home.getCart();
-        CartPage cart = new CartPage(d);
+        CartPage cart = new CartPage(driver);
         String cartProduct = cart.getProductName();
 
         Assert.assertEquals(cartProduct,homeProduct,"Home page product and Cart product do not match");
         Reporter.log("Home-to-Cart product consistency verified", true);
         cart.getCheckoutbtn();
-        Assert.assertTrue(d.getCurrentUrl().contains("checkout-step-one.html"),"Checkout Information page was not displayed");
+        Assert.assertTrue(driver.getCurrentUrl().contains("checkout-step-one.html"),"Checkout Information page was not displayed");
     }
 
     // Verify Checkout Information to Overview navigation.
@@ -95,7 +95,7 @@ public class CheckoutIntegrationTest extends BaseClass {
         login();
         CompletePage complete = completeOrder();
         complete.getBackToHomebtn();
-        Assert.assertTrue(d.getCurrentUrl().contains("inventory.html"),"User was not navigated back to the Products page");
+        Assert.assertTrue(driver.getCurrentUrl().contains("inventory.html"),"User was not navigated back to the Products page");
         Reporter.log("Complete-to-Home navigation verified", true);
     }
 
@@ -105,7 +105,7 @@ public class CheckoutIntegrationTest extends BaseClass {
         login();
         navigateToCheckout();
         logout();
-        Assert.assertTrue(d.getCurrentUrl().equals("https://www.saucedemo.com/"),"User was not returned to the login page after logout");
+        Assert.assertTrue(driver.getCurrentUrl().equals("https://www.saucedemo.com/"),"User was not returned to the login page after logout");
         Reporter.log("Logout from Checkout verified", true);
     }
 
@@ -115,9 +115,9 @@ public class CheckoutIntegrationTest extends BaseClass {
         login();
         CompletePage complete = completeOrder();
         complete.getMessage();
-        HomePage home = new HomePage(d);
+        HomePage home = new HomePage(driver);
         home.getMenubar();
-        DynamicCatalogPage catalog = new DynamicCatalogPage(d);
+        DynamicCatalogPage catalog = new DynamicCatalogPage(driver);
         catalog.getDynamicCatalog();
         Reporter.log("Order completion and Dynamic Catalog interactions executed",true);
     }
@@ -130,8 +130,8 @@ public class CheckoutIntegrationTest extends BaseClass {
         CheckoutPage checkout = navigateToCheckout();
         checkout.getContinuebtn();
         Assert.assertTrue(checkout.getErrorMessage().contains("First Name is required"),"Required-field error was not displayed");
-        Assert.assertTrue(d.getCurrentUrl().contains("checkout-step-one.html"),"Invalid checkout reached the Overview page");
+        Assert.assertTrue(driver.getCurrentUrl().contains("checkout-step-one.html"),"Invalid checkout reached the Overview page");
         Reporter.log("Checkout validation verified", true);
-        ScreenshotUtility.takeScreenshot(d, "Checkout_RequiredFields");
+        ScreenshotUtility.takeScreenshot(driver, "Checkout_RequiredFields");
     }
 }

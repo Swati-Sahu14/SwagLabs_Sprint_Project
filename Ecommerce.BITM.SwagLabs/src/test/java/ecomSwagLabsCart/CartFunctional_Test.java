@@ -14,10 +14,10 @@ public class CartFunctional_Test extends BaseClass {
 	@Test(priority = 1,groups = {"FT", "Pos"})
     public void verifyProductInCartTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getCarttitle();
     }
 
@@ -25,10 +25,10 @@ public class CartFunctional_Test extends BaseClass {
 	@Test(priority = 2,groups = {"FT", "Pos"})
 	   public void ProductsInCartPage() throws Exception {
 		   login();
-		   HomePage h = new HomePage(d);
+		   HomePage h = new HomePage(driver);
 		   h.getAddItemToCart();
 	       h.getCart();
-		   CartPage c = new CartPage(d);
+		   CartPage c = new CartPage(driver);
 		   c.verifyProductsInCart();
 	   }
 
@@ -36,10 +36,10 @@ public class CartFunctional_Test extends BaseClass {
 	@Test(priority = 3,groups = {"FT", "Pos"})
     public void continueShoppingTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getContinueShopping();
         h.getTitle();
     }
@@ -48,10 +48,10 @@ public class CartFunctional_Test extends BaseClass {
 	@Test(priority = 4,groups = {"FT", "Pos"})
     public void removeTest() throws Exception {
     login();
-    HomePage h = new HomePage(d);
+    HomePage h = new HomePage(driver);
     h.getAddItemToCart();
     h.getCart();
-    CartPage c = new CartPage(d);
+    CartPage c = new CartPage(driver);
     c.getRemovebtn();
     c.verifyProductRemoved();
     }
@@ -60,10 +60,10 @@ public class CartFunctional_Test extends BaseClass {
     @Test(priority = 5,groups = {"FT", "Pos"})
     public void verifyCheckoutbtnTest() throws Exception {
     	login();
-    	HomePage h = new HomePage(d);
+    	HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getCheckoutbtn();
     }
  
@@ -72,14 +72,14 @@ public class CartFunctional_Test extends BaseClass {
     public void emptyCartCheckoutTest() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.verifyCartEmpty();
         c.getCheckoutbtn();
-        CheckoutPage cop = new CheckoutPage(d);
+        CheckoutPage cop = new CheckoutPage(driver);
         cop.verifyCheckoutInformationPage();
-        ScreenshotUtility.takeScreenshot(d, "EmptyCart_Checkout");
+        ScreenshotUtility.takeScreenshot(driver, "EmptyCart_Checkout");
     }
     
 }

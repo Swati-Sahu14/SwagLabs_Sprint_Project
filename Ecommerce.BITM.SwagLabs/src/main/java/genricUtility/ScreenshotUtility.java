@@ -26,3 +26,22 @@ public class ScreenshotUtility {
         System.out.println("Screenshot saved successfully: "+ des.getAbsolutePath());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

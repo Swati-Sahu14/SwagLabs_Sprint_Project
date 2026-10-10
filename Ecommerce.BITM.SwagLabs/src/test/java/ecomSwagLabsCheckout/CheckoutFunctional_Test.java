@@ -20,12 +20,12 @@ public class CheckoutFunctional_Test extends BaseClass {
     // Navigate to the Checkout Information page.
     private CheckoutPage navigateToCheckout() throws Exception {
         login();
-        HomePage hp = new HomePage(d);
+        HomePage hp = new HomePage(driver);
         hp.getAddItemToCart();
         hp.getCart();
-        CartPage cp = new CartPage(d);
+        CartPage cp = new CartPage(driver);
         cp.getCheckoutbtn();
-        return new CheckoutPage(d);
+        return new CheckoutPage(driver);
     }
 
     // Enter checkout information and navigate to the Overview page.
@@ -35,19 +35,19 @@ public class CheckoutFunctional_Test extends BaseClass {
         cop.getLn(PropertyFileUtility.getDataFromProperty("LastName"));
         cop.getPCode(PropertyFileUtility.getDataFromProperty("Zip_code"));
         cop.getContinuebtn();
-        return new OverviewPage(d);
+        return new OverviewPage(driver);
     }
 
     // Complete the checkout process and reach the confirmation page.
     private CompletePage completeOrder() throws Exception {
         OverviewPage op = navigateToOverview();
         op.getFinishbtn();
-        return new CompletePage(d);
+        return new CompletePage(driver);
     }
     
  // Retrieve the checkout validation error message.
     private String getErrorMessage() {
-        return d.findElement(By.cssSelector("[data-test='error']")).getText();
+        return driver.findElement(By.cssSelector("[data-test='error']")).getText();
     }
 
     //Verify checkout information can be entered.
@@ -130,9 +130,9 @@ public class CheckoutFunctional_Test extends BaseClass {
         cop.getPCode(postalCode);
         cop.getContinuebtn();
         Assert.assertTrue(getErrorMessage().contains("First Name is required"),"First Name validation message was not displayed");
-        Assert.assertTrue(d.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded despite empty fields");
+        Assert.assertTrue(driver.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded despite empty fields");
         Reporter.log("All-empty checkout validation verified", true);
-        ScreenshotUtility.takeScreenshot(d, "Checkout_AllFieldsEmpty");
+        ScreenshotUtility.takeScreenshot(driver, "Checkout_AllFieldsEmpty");
     }
 
     // Verify validation when First Name is empty.
@@ -145,9 +145,9 @@ public class CheckoutFunctional_Test extends BaseClass {
         cop.getContinuebtn();
 
         Assert.assertTrue(getErrorMessage().contains("First Name is required"),"First Name validation message was not displayed");
-        Assert.assertTrue(d.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded without First Name");
+        Assert.assertTrue(driver.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded without First Name");
         Reporter.log("Empty First Name validation verified", true);
-        ScreenshotUtility.takeScreenshot(d, "Checkout_EmptyFirstName");
+        ScreenshotUtility.takeScreenshot(driver, "Checkout_EmptyFirstName");
     }
 
     //Verify validation when Last Name is empty.
@@ -161,8 +161,8 @@ public class CheckoutFunctional_Test extends BaseClass {
         cop.getContinuebtn();
         Assert.assertTrue(getErrorMessage().contains("Last Name is required"),"Last Name validation message was not displayed");
 
-        Assert.assertTrue( d.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded without Last Name");
+        Assert.assertTrue( driver.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded without Last Name");
         Reporter.log("Empty Last Name validation verified", true);
-        ScreenshotUtility.takeScreenshot(d, "Checkout_EmptyLastName");
+        ScreenshotUtility.takeScreenshot(driver, "Checkout_EmptyLastName");
     }
 }

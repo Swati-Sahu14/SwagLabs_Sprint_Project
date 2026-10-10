@@ -14,18 +14,18 @@ public class LoginWithInvalidCredentials_Test extends BaseClass {
     @Test(groups = {"FT", "Neg"},dataProvider = "loginDetails",dataProviderClass = DataProviderClass.class)
     public void invalidLoginTest(String username, String password) throws Exception {
 
-        LoginPage l = new LoginPage(d);
+        LoginPage l = new LoginPage(driver);
         l.login(username, password);
         l.getErrorMessage();
         Reporter.log("Invalid login validation completed", true);
-        ScreenshotUtility.takeScreenshot(d, "InvalidLogin");
+        ScreenshotUtility.takeScreenshot(driver, "InvalidLogin");
     }
     
 // // Verify that the login form handles boundary input values correctly
 //    @Test(priority = 2,groups = {"BVA", "Neg"},dataProvider = "loginDetails",dataProviderClass = DataProviderClass.class)
 //    public void loginBoundaryTest(String username, String password) throws Exception {
 //
-//        LoginPage l = new LoginPage(d);
+//        LoginPage l = new LoginPage(driver);
 //        l.login(username, password);
 //        l.getErrorMessage();
 //        Reporter.log("Boundary login input validated successfully", true);

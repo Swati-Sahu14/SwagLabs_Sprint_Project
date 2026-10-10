@@ -18,8 +18,8 @@ public class LoginWithValidCredentials_Test extends BaseClass {
     public void validLoginTest() throws IOException, InterruptedException {
 
         login();
-        String title = d.getTitle();
-        String currentUrl = d.getCurrentUrl();
+        String title = driver.getTitle();
+        String currentUrl = driver.getCurrentUrl();
         Reporter.log("Home Page Title: " + title, true);
         Reporter.log("Current URL: " + currentUrl, true);
 
@@ -34,12 +34,12 @@ public class LoginWithValidCredentials_Test extends BaseClass {
           dataProviderClass = DataProviderClass.class)
     public void validLoginTestWithMultipleCredentials(String username, String password) {
 
-        LoginPage l = new LoginPage(d);
+        LoginPage l = new LoginPage(driver);
         l.getUsername(username);
         l.getPassword(password);
         l.getLogin();
-        String title = d.getTitle();
-        String currentUrl = d.getCurrentUrl();
+        String title = driver.getTitle();
+        String currentUrl = driver.getCurrentUrl();
         Reporter.log("Username: " + username, true);
         Reporter.log("Home Page Title: " + title, true);
         Reporter.log("Current URL: " + currentUrl, true);
@@ -54,7 +54,7 @@ public class LoginWithValidCredentials_Test extends BaseClass {
     public void verifyLoginNavigatesToProductPage() throws IOException, InterruptedException {
 
     		login();
-        HomePage hp = new HomePage(d);
+        HomePage hp = new HomePage(driver);
 
         Assert.assertEquals(hp.getProductsTitle() ,"Products","Login did not navigate to the Products page");
         Reporter.log("Products page is displayed successfully", true);

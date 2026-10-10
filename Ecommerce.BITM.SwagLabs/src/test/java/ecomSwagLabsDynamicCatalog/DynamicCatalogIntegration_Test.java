@@ -12,9 +12,9 @@ public class DynamicCatalogIntegration_Test extends BaseClass {
 	@Test(priority = 1, groups = {"IT", "Pos"})
     public void loginToLazyLoad() throws Exception {
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar(); 
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getLazyLoad();
         h.getMenubar();
@@ -26,9 +26,9 @@ public class DynamicCatalogIntegration_Test extends BaseClass {
     @Test(priority = 2, groups = {"IT", "Pos"})
     public void loginToSpinner() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSpinner();
         dp.verifySpinnerProducts();
@@ -40,9 +40,9 @@ public class DynamicCatalogIntegration_Test extends BaseClass {
     @Test(priority = 3, groups = {"IT", "Pos"})
     public void loginToSlider() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSlider();
         dp.verifySliderProducts();
@@ -54,9 +54,9 @@ public class DynamicCatalogIntegration_Test extends BaseClass {
     @Test(priority = 4, groups = {"IT", "Pos"})
     public void DynamicCatalogTOAll() throws Exception {
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getLazyLoad();
         h.getMenubar();
@@ -72,9 +72,9 @@ public class DynamicCatalogIntegration_Test extends BaseClass {
     public void sliderProductsNotRemainInAllItemsTest() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSlider();
         dp.verifySliderProducts();

@@ -13,10 +13,10 @@ public class DynamicCatalogFunctional_Test extends BaseClass {
     public void lazyLoadTest() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
 
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getLazyLoad();
         dp.verifyLazyLoadProducts();
@@ -28,10 +28,10 @@ public class DynamicCatalogFunctional_Test extends BaseClass {
 	 @Test(priority = 2, groups = {"FT", "Pos"})
     public void spinnerTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
 
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSpinner();
         dp.verifySpinnerProducts();
@@ -43,10 +43,10 @@ public class DynamicCatalogFunctional_Test extends BaseClass {
 	 @Test(priority = 3, groups = {"FT", "Pos"})
     public void sliderTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
 
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSlider();
         dp.verifySliderProducts();
@@ -58,9 +58,9 @@ public class DynamicCatalogFunctional_Test extends BaseClass {
 	    public void sliderDuplicateDotsTest() throws Exception {
 
 	        login();
-	        HomePage h = new HomePage(d);
+	        HomePage h = new HomePage(driver);
 	        h.getMenubar();
-	        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+	        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
 	        dp.getDynamicCatalog();
 	        dp.getSlider();
 	        dp.verifySliderDots();

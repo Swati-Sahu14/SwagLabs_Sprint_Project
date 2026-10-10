@@ -14,10 +14,10 @@ public class DynamicCatalogSmoke_Test extends BaseClass {
             throws Exception {
 
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
         
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getLazyLoad();
         h.getMenubar();
@@ -31,9 +31,9 @@ public class DynamicCatalogSmoke_Test extends BaseClass {
     public void spinnerSmoke()
             throws Exception {
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSpinner();
         dp.verifySpinnerProducts();
@@ -47,9 +47,9 @@ public class DynamicCatalogSmoke_Test extends BaseClass {
 	@Test(priority=3,groups = {"SM", "Pos"})
     public void sliderSmoke() throws Exception {
     	login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getMenubar();
-        DynamicCatalogPage dp = new DynamicCatalogPage(d);
+        DynamicCatalogPage dp = new DynamicCatalogPage(driver);
         dp.getDynamicCatalog();
         dp.getSlider();
         dp.verifySliderProducts();
@@ -64,10 +64,10 @@ public class DynamicCatalogSmoke_Test extends BaseClass {
 
          login();
 
-         HomePage h = new HomePage(d);
+         HomePage h = new HomePage(driver);
          h.getMenubar();
 
-         DynamicCatalogPage dp = new DynamicCatalogPage(d);
+         DynamicCatalogPage dp = new DynamicCatalogPage(driver);
          dp.getDynamicCatalog();
          dp.getSpinner();
 
