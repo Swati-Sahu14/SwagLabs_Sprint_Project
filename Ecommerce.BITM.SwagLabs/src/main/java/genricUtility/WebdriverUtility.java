@@ -1,5 +1,6 @@
 package genricUtility;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,11 +21,34 @@ public class WebdriverUtility {
         WebDriver driver;
         if (browser.equalsIgnoreCase("chrome")) {
 
-            ChromeOptions settings = new ChromeOptions();
-            Map<String, Object> prefs = new HashMap<>();
-            prefs.put("profile.password_manager_leak_detection", false);
-            settings.setExperimentalOption("prefs", prefs);
-            driver = new ChromeDriver(settings);
+        	ChromeOptions settings = new ChromeOptions();
+
+        	Map<String, Object> prefs = new HashMap<>();
+
+        	// Disable password leak detection
+        	prefs.put("profile.password_manager_leak_detection", false);
+
+        	// Set download folder to Jenkins project workspace
+        	String downloadPath = System.getProperty("user.dir")
+        	        + File.separator + "downloads";
+
+        	File folder = new File(downloadPath);
+
+        	if (!folder.exists()) {
+        	    folder.mkdirs();
+        	}
+
+        	// Configure Chrome downloads
+        	prefs.put("download.default_directory", downloadPath);
+        	prefs.put("download.prompt_for_download", false);
+        	prefs.put("download.directory_upgrade", true);
+
+        	// Download PDF instead of opening it in Chrome
+        	prefs.put("plugins.always_open_pdf_externally", true);
+
+        	settings.setExperimentalOption("prefs", prefs);
+
+        	driver = new ChromeDriver(settings);
 
         } else if (browser.equalsIgnoreCase("edge")) {
 

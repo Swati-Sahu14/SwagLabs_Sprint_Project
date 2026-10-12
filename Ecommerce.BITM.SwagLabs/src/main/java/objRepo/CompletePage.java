@@ -56,20 +56,41 @@ public class CompletePage {
 	}
 
 	// Downloads the order PDF and verifies that a PDF file exists
-	public void getPdfbtn() {
+	public void getPdfbtn() throws InterruptedException {
+
+	    // Click the Generate PDF button
 	    pdfbtn.click();
-	    File folder = new File(System.getProperty("user.home"), "Downloads");
-	    Assert.assertTrue(folder.exists() && folder.isDirectory(),"Downloads folder does not exist: " + folder.getAbsolutePath());
-	    File[] files = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".pdf"));
-	    Assert.assertNotNull(files,"Unable to access the Downloads folder: " + folder.getAbsolutePath());
+
+	    // Wait for the PDF download
+	    Thread.sleep(2000);
+
+	    // Locate the Downloads folder
+	    File folder = new File(System.getProperty("user.home") + "\\Downloads");
+
+	    // Get the files in the Downloads folder
+	    File[] files = folder.listFiles();
+
 	    boolean pdfFound = false;
-	    for (File file : files) {
-	        if (file.isFile()) {
-	            pdfFound = true;
-	            break;
+
+	    // Check whether the folder is accessible
+	    if (files != null) {
+
+	        for (File file : files) {
+
+	            if (file.isFile() &&
+	                file.getName().toLowerCase().endsWith(".pdf")) {
+
+	                pdfFound = true;
+	                System.out.println("PDF downloaded successfully: " + file.getName());
+	                break;
+	            }
 	        }
+
+	    } else {
+	        System.out.println("Unable to read the Downloads folder.");
 	    }
-	    Assert.assertTrue(pdfFound, "PDF is not generated in the Downloads folder");
-	    Reporter.log("PDF is downloaded successfully", true);
-	}	
+
+	    // Verify the PDF download
+	    Assert.assertTrue(pdfFound,"PDF file was not downloaded successfully.");
+	}
 }
