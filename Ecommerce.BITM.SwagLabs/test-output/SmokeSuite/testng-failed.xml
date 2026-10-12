@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SmokeSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Smoke Testing(failed)">
+    <groups>
+      <run>
+        <include name="SM"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ecomSwagLabsCart.CartSmoke_Test">
+        <methods>
+          <include name="bm"/>
+          <include name="am"/>
+          <include name="at"/>
+          <include name="cartSmokeTest"/>
+          <include name="bs"/>
+          <include name="bt"/>
+          <include name="as"/>
+        </methods>
+      </class> <!-- ecomSwagLabsCart.CartSmoke_Test -->
+    </classes>
+  </test> <!-- Smoke Testing(failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

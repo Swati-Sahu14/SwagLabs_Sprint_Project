@@ -10,14 +10,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+//Utility class to launch and configure different browsers
 public class WebdriverUtility {
-
     public static WebDriver launchbrowser(String browser) {
-
         if (browser == null || browser.trim().isEmpty()) {
             throw new IllegalArgumentException("Browser name is missing in the property file.");
         }
-
         browser = browser.trim();
         WebDriver driver;
         if (browser.equalsIgnoreCase("chrome")) {
@@ -41,9 +39,7 @@ public class WebdriverUtility {
         }
 
         driver.manage().window().maximize();
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         return driver;
     }
 }

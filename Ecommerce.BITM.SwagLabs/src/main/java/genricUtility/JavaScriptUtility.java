@@ -3,10 +3,10 @@ package genricUtility;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+//Utility class to scroll the webpage using JavaScript
 public class JavaScriptUtility {
 
     JavascriptExecutor js;
-
     public JavaScriptUtility(WebDriver driver) {
         js = (JavascriptExecutor) driver;
     }

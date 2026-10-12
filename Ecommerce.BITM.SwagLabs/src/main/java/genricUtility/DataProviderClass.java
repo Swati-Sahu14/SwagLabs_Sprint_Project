@@ -24,7 +24,6 @@ public class DataProviderClass {
         try (FileInputStream fis = new FileInputStream(EXCEL_PATH);
             Workbook workbook = WorkbookFactory.create(fis)) {
             Sheet sheet = workbook.getSheet("InvalidLogin");
-
             if (sheet == null) {
                 throw new IllegalArgumentException("Sheet 'InvalidLogin' was not found in TestData.xlsx");
             }

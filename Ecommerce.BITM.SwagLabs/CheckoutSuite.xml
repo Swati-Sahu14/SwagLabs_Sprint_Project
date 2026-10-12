@@ -4,7 +4,7 @@
   <test thread-count="5" name="Checkout Module Testing">
     <classes>
       <class name="ecomSwagLabsCheckout.CheckoutIntegrationTest"/>
-      <class name="ecomSwagLabsCheckout.Checkout_smoke"/>
+      <class name="ecomSwagLabsCheckout.CheckoutSmoke_Test"/>
       <class name="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
       <class name="ecomSwagLabsCheckout.CheckoutSystem_Test"/>
     </classes>

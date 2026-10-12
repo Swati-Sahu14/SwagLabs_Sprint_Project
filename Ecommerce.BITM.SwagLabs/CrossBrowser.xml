@@ -6,6 +6,7 @@
     <!-- Chrome -->
     <test name="Cross Browser Testing in Chrome">
         <parameter name="browser" value="chrome"/>
+        
         <packages>
             <package name="ecomSwagLabsLogin"/>
             <package name="ecomSwagLabsHome"/>

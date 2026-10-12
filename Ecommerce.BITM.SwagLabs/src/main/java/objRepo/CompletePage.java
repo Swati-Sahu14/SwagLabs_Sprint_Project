@@ -12,12 +12,14 @@ import org.testng.Reporter;
 public class CompletePage {
 
 	WebDriver d;
+	// Constructor to initialize WebDriver and PageFactory
 	public CompletePage(WebDriver d)
 	{
 		this.d = d;
 		PageFactory.initElements(d,this);
 	}
 	
+	// Locators for the checkout completion page elements
 	@FindBy(xpath = "//span[@class='title']")
 	private WebElement OrderTitle;
 
@@ -30,7 +32,7 @@ public class CompletePage {
 	@FindBy(id = "generate-pdf-order")
 	private WebElement pdfbtn;
 	
-	
+	// Verifies the checkout completion page title
 	public void getOrderTitle() {
 		String title = OrderTitle.getText();
 		Reporter.log("Order Title: "+title,true);
@@ -38,12 +40,14 @@ public class CompletePage {
 		Reporter.log("Order Complete page is displayed",true);
 	}
 
+	// Verifies the order confirmation message
 	public void getMessage() {
 		String m = message.getText();
 		Reporter.log(m,true);
 		Assert.assertTrue(m.contains("Thank you for your order!"),"Order confirmation message is incorrect");
 	}
 
+	// Navigates back to the home page and verifies the URL
 	public void getBackToHomebtn() throws InterruptedException {
 		backToHomebtn.click();
 		Thread.sleep(2000);
@@ -51,6 +55,7 @@ public class CompletePage {
 		Reporter.log("HomePage is displayed",true);
 	}
 
+	// Downloads the order PDF and verifies that a PDF file exists
 	public void getPdfbtn() throws InterruptedException {
 		pdfbtn.click();
 		Thread.sleep(2000);

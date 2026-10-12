@@ -1,0 +1,262 @@
+<html>
+<head>
+<title>TestNG:  Smoke Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Smoke Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 11 00:07:35 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>145 seconds (145788 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>SM </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecomSwagLabsCheckout.CheckoutSmoke_Test.basicTest()'><b>basicTest</b><br>Test class: ecomSwagLabsCheckout.CheckoutSmoke_Test<br/>
+<a href="#Output-1139817507" onClick='toggleBox("Output-1139817507", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1139817507" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1139817507">
+Login successful<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Cart product: Sauce Labs Bike Light<br/>
+Checkout Information page is displayed<br/>
+Checkout Overview page is displayed<br/>
+Payment Information:
+SauceCard #31337
+Shipping Information:
+Free Pony Express Delivery!
+Price Total
+Item total: $9.99
+Tax: $0.80
+Total: $10.79
+Cancel
+Finish<br/>
+Order Completed page is displayed<br/>
+Thank you for your order!
+Your order has been dispatched, and will arrive just as fast as the pony can get there!
+Back Home
+Generate PDF order<br/>
+HomePage is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>ecomSwagLabsCheckout.CheckoutSmoke_Test@5aebe890</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.dynamicCatalogSmoke()'><b>dynamicCatalogSmoke</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-1251247808" onClick='toggleBox("Output-1251247808", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1251247808" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1251247808">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@5fbe4146</td></tr>
+<tr>
+<td title='ecomSwagLabsCart.CartSmoke_Test.verifyCartWithoutLogin()'><b>verifyCartWithoutLogin</b><br>Test class: ecomSwagLabsCart.CartSmoke_Test<br/>
+<a href="#Output-1488298739" onClick='toggleBox("Output-1488298739", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1488298739" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1488298739">
+Cart is not accessible without login<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecomSwagLabsCart.CartSmoke_Test@58a9760d</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSmoke_Test.verifyHomePageLoads()'><b>verifyHomePageLoads</b><br>Test class: ecomSwagLabsHome.HomeSmoke_Test<br/>
+<a href="#Output-1296109622" onClick='toggleBox("Output-1296109622", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1296109622" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1296109622">
+Login successful<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Products are visible<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecomSwagLabsHome.HomeSmoke_Test@13b6aecc</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.sliderSmoke()'><b>sliderSmoke</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-36127072" onClick='toggleBox("Output-36127072", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-36127072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-36127072">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Slider products displayed<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@5fbe4146</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSmoke_Test.verifyInventoryRequiresLogin()'><b>verifyInventoryRequiresLogin</b><br>Test class: ecomSwagLabsHome.HomeSmoke_Test<br/>
+<a href="#Output-235151116" onClick='toggleBox("Output-235151116", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-235151116" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-235151116">
+Inventory access is blocked without login<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecomSwagLabsHome.HomeSmoke_Test@13b6aecc</td></tr>
+<tr>
+<td title='ecomSwagLabsCart.CartSmoke_Test.cartSmokeTest()'><b>cartSmokeTest</b><br>Test class: ecomSwagLabsCart.CartSmoke_Test<br/>
+<a href="#Output-912584968" onClick='toggleBox("Output-912584968", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-912584968" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-912584968">
+Login successful<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Number of products in cart: 1<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecomSwagLabsCart.CartSmoke_Test@58a9760d</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.spinnerSmoke()'><b>spinnerSmoke</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-1595354442" onClick='toggleBox("Output-1595354442", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1595354442" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1595354442">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Spinner products displayed<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@5fbe4146</td></tr>
+<tr>
+<td title='ecomSwagLabsCheckout.CheckoutSmoke_Test.checkoutMustRejectEmptyInformation()'><b>checkoutMustRejectEmptyInformation</b><br>Test class: ecomSwagLabsCheckout.CheckoutSmoke_Test<br/>
+<a href="#Output-1474640235" onClick='toggleBox("Output-1474640235", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1474640235" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1474640235">
+Login successful<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Checkout Information page is displayed<br/>
+Checkout correctly rejected empty customer information<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsCheckout.CheckoutSmoke_Test@5aebe890</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.spinnerDuplicateProductsTest()'><b>spinnerDuplicateProductsTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-131096911" onClick='toggleBox("Output-131096911", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-131096911" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-131096911">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Spinner page does not display more than six product cards<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@5fbe4146</td></tr>
+</table><p>
+</body>
+</html>

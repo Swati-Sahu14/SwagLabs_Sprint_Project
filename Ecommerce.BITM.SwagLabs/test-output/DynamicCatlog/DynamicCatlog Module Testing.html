@@ -1,0 +1,377 @@
+<html>
+<head>
+<title>TestNG:  DynamicCatlog Module Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>DynamicCatlog Module Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 11 16:04:56 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>272 seconds (272038 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test.DynamicCatalogTOAll()'><b>DynamicCatalogTOAll</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test<br/>
+<a href="#Output-2025388056" onClick='toggleBox("Output-2025388056", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2025388056" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2025388056">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test.lazyLoadTest()'><b>lazyLoadTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test<br/>
+<a href="#Output-1234905692" onClick='toggleBox("Output-1234905692", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1234905692" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1234905692">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Lazy Load products displayed<br/>
+Products are displayed after scroll 1<br/>
+Products are displayed after scroll 2<br/>
+Products are displayed after scroll 3<br/>
+Products are displayed after scroll 4<br/>
+Products are displayed after scroll 5<br/>
+Lazy Load is working after multiple scrolling<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test@7586beff</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.spinnerSmoke()'><b>spinnerSmoke</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-1474310983" onClick='toggleBox("Output-1474310983", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1474310983" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1474310983">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Spinner products displayed<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test.loginToLazyLoad()'><b>loginToLazyLoad</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test<br/>
+<a href="#Output-2035069547" onClick='toggleBox("Output-2035069547", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2035069547" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2035069547">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test.sliderProductsNotRemainInAllItemsTest()'><b>sliderProductsNotRemainInAllItemsTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test<br/>
+<a href="#Output-977612943" onClick='toggleBox("Output-977612943", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-977612943" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-977612943">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Slider products displayed<br/>
+Slider elements are not displayed on All Items<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test.sliderTest()'><b>sliderTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test<br/>
+<a href="#Output-555740147" onClick='toggleBox("Output-555740147", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-555740147" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-555740147">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Slider products displayed<br/>
+Slider 1 Product: Sauce Labs Bike Light
+$9.99<br/>
+Slider 2 Product: Sauce Labs Onesie
+$7.99<br/>
+Slider 3 Product: Sauce Labs Backpack
+$29.99<br/>
+Slider 4 Product: Test.allTheThings() T-Shirt (Red)
+$15.99<br/>
+Slider 5 Product: Sauce Labs Fleece Jacket
+$49.99<br/>
+All slider products are displayed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test@7586beff</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test.repeatedScrollStabilityTest()'><b>repeatedScrollStabilityTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test<br/>
+<a href="#Output-1835529707" onClick='toggleBox("Output-1835529707", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1835529707" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1835529707">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Products remain available after scroll 1<br/>
+Products remain available after scroll 2<br/>
+Products remain available after scroll 3<br/>
+Products remain available after scroll 4<br/>
+Products remain available after scroll 5<br/>
+Repeated scrolling completed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.dynamicCatalogSmoke()'><b>dynamicCatalogSmoke</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-150835665" onClick='toggleBox("Output-150835665", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-150835665" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-150835665">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test.sliderDuplicateDotsTest()'><b>sliderDuplicateDotsTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test<br/>
+<a href="#Output-161118423" onClick='toggleBox("Output-161118423", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-161118423" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-161118423">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Slider dots are displayed, enabled, and unique<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test@7586beff</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test.catalogAccessAfterLogoutTest()'><b>catalogAccessAfterLogoutTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test<br/>
+<a href="#Output-23218037" onClick='toggleBox("Output-23218037", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-23218037" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-23218037">
+Login successful<br/>
+Logging out<br/>
+Logout successful<br/>
+Catalog is not accessible after logout<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test.completeDynamicCatalogFlow()'><b>completeDynamicCatalogFlow</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test<br/>
+<a href="#Output-173783788" onClick='toggleBox("Output-173783788", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-173783788" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-173783788">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Lazy Load is opened<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSystem_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test.loginToSpinner()'><b>loginToSpinner</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test<br/>
+<a href="#Output-1894577531" onClick='toggleBox("Output-1894577531", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1894577531" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1894577531">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Spinner products displayed<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test.spinnerTest()'><b>spinnerTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test<br/>
+<a href="#Output-102318785" onClick='toggleBox("Output-102318785", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-102318785" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-102318785">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Spinner products displayed<br/>
+Sauce Labs Bike Light
+$9.99<br/>
+Sauce Labs Bolt T-Shirt
+$15.99<br/>
+Sauce Labs Onesie
+$7.99<br/>
+Test.allTheThings() T-Shirt (Red)
+$15.99<br/>
+Sauce Labs Backpack
+$29.99<br/>
+Sauce Labs Fleece Jacket
+$49.99<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogFunctional_Test@7586beff</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.spinnerDuplicateProductsTest()'><b>spinnerDuplicateProductsTest</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-895280806" onClick='toggleBox("Output-895280806", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-895280806" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-895280806">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Spinner is opened<br/>
+Spinner page does not display more than six product cards<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test.sliderSmoke()'><b>sliderSmoke</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test<br/>
+<a href="#Output-859156431" onClick='toggleBox("Output-859156431", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-859156431" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-859156431">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Slider products displayed<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogSmoke_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test.loginToSlider()'><b>loginToSlider</b><br>Test class: ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test<br/>
+<a href="#Output-2031373582" onClick='toggleBox("Output-2031373582", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2031373582" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2031373582">
+Login successful<br/>
+Dynamic Catalog is opened<br/>
+Slider is opened<br/>
+Slider products displayed<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>ecomSwagLabsDynamicCatalog.DynamicCatalogIntegration_Test@dd05255</td></tr>
+</table><p>
+</body>
+</html>

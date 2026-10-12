@@ -20,8 +20,9 @@ import objRepo.LogoutPage;
 
 public class BaseClass {
 
+	// Controls the browser
 	public WebDriver driver;
-
+	
     @BeforeSuite(alwaysRun = true)
     public void bs() {
         Reporter.log("Open Database", true);
@@ -42,6 +43,7 @@ public class BaseClass {
         Reporter.log("PostCondition", true);
     }
 
+    // Launches the specified browser and opens the application before every test method
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
     public void bm(@Optional("chrome") String browser) throws IOException, InterruptedException {
@@ -63,7 +65,8 @@ public class BaseClass {
             Reporter.log("Browser closed", true);
         }
     }
-
+    
+    // Reusable method to log in to the application
     public void login() throws IOException, InterruptedException {
         LoginPage l = new LoginPage(driver);
         l.getUsername(PropertyFileUtility.getDataFromProperty("username"));
@@ -72,7 +75,8 @@ public class BaseClass {
         Thread.sleep(3000);
         Reporter.log("Login successful", true);
     }
-
+    
+    // Reusable method to log out of the application
     public void logout() throws InterruptedException {
 
         Reporter.log("Logging out", true);

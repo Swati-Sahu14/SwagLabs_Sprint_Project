@@ -22,7 +22,6 @@ public class ScreenshotUtility {
 
         // Copy screenshot to folder
         FileHandler.copy(src, des);
-
         System.out.println("Screenshot saved successfully: "+ des.getAbsolutePath());
     }
 }

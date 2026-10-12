@@ -61,8 +61,7 @@ public class CheckoutPage {
     }
 
     // Click Continue to proceed to Checkout Overview
-    public void getContinuebtn() {
-        
+    public void getContinuebtn() {      
         wait.until(ExpectedConditions.elementToBeClickable(continuebtn)).click();
         System.out.println("Current URL: " + d.getCurrentUrl());
         if (!d.findElements(By.cssSelector("[data-test='error']")).isEmpty()) {
@@ -114,6 +113,7 @@ public class CheckoutPage {
         Reporter.log("Your Cart page is displayed", true);
     }
     
+    // Verifies that the user remains on the checkout information page.
     public void verifyCheckoutInformationPage() {
 	    Assert.assertTrue(d.getCurrentUrl().contains("checkout-step-one.html"),"Checkout proceeded despite invalid information");
 	    Reporter.log("User remains on Checkout Information page", true);
