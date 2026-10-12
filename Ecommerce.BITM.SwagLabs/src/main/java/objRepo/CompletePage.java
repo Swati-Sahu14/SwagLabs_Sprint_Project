@@ -55,7 +55,6 @@ public class CompletePage {
 		Reporter.log("HomePage is displayed",true);
 	}
 
-	// Downloads the order PDF and verifies that a PDF file exists
 	public void getPdfbtn() throws InterruptedException {
 
 	    // Click the Generate PDF button
@@ -93,4 +92,5 @@ public class CompletePage {
 	    // Verify the PDF download
 	    Assert.assertTrue(pdfFound,"PDF file was not downloaded successfully.");
 	}
+
 }

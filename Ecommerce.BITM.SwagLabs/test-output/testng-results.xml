@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
@@ -126,6 +127,986 @@
           </reporter-output>
         </test-method> <!-- at -->
         <test-method is-config="true" signature="as()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@327514f]" started-at="2026-10-12T12:10:39 IST" name="as" finished-at="2026-10-12T12:10:39 IST" duration-ms="1" status="PASS">
+=======
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Open Database]]>
+    </line>
+    <line>
+      <![CDATA[PreCondition]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[First Name entered correctly: Swati]]>
+    </line>
+    <line>
+      <![CDATA[Last Name entered correctly: Sahu]]>
+    </line>
+    <line>
+      <![CDATA[Postal Code entered correctly: 123456]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Overview page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Payment Information:
+SauceCard #31337
+Shipping Information:
+Free Pony Express Delivery!
+Price Total
+Item total: $9.99
+Tax: $0.80
+Total: $10.79
+Cancel
+Finish]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[HomePage is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Order Completed page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Thank you for your order!
+Your order has been dispatched, and will arrive just as fast as the pony can get there!
+Back Home
+Generate PDF order]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Order Completed page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[HomePage is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Order Completed page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Pdf is downloaded successfully]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[All-empty checkout validation verified]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Empty First Name validation verified]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Opening browser]]>
+    </line>
+    <line>
+      <![CDATA[Application launched]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Your Cart]]>
+    </line>
+    <line>
+      <![CDATA[Cart page is opened]]>
+    </line>
+    <line>
+      <![CDATA[Checkout Information page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Empty Last Name validation verified]]>
+    </line>
+    <line>
+      <![CDATA[Test completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[PostCondition]]>
+    </line>
+    <line>
+      <![CDATA[Close Database connectivity]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-10-12T10:49:57 IST" name="Default suite" finished-at="2026-10-12T10:52:30 IST" duration-ms="153154">
+    <groups>
+      <group name="Neg">
+        <method signature="CheckoutFunctional_Test.emptyAllFieldsTest(java.lang.String,java.lang.String,java.lang.String)[pri:9, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="emptyAllFieldsTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.emptyFirstNameTest(java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="emptyFirstNameTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.emptyLastNameTest(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="emptyLastNameTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+      </group> <!-- Neg -->
+      <group name="Pos">
+        <method signature="CheckoutFunctional_Test.verifyCheckoutInformationTest()[pri:1, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyCheckoutInformationTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyContinueButtonTest()[pri:2, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyContinueButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyCheckoutCancelButtonTest()[pri:3, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyCheckoutCancelButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyOrderSummaryTest()[pri:4, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyOrderSummaryTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyOverviewCancelButtonTest()[pri:5, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyOverviewCancelButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyOrderConfirmationMessageTest()[pri:6, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyOrderConfirmationMessageTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyBackToHomeButtonTest()[pri:7, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyBackToHomeButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyPdfReceiptTest()[pri:8, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyPdfReceiptTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+      </group> <!-- Pos -->
+      <group name="FT">
+        <method signature="CheckoutFunctional_Test.verifyCheckoutInformationTest()[pri:1, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyCheckoutInformationTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyContinueButtonTest()[pri:2, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyContinueButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyCheckoutCancelButtonTest()[pri:3, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyCheckoutCancelButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyOrderSummaryTest()[pri:4, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyOrderSummaryTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyOverviewCancelButtonTest()[pri:5, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyOverviewCancelButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyOrderConfirmationMessageTest()[pri:6, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyOrderConfirmationMessageTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyBackToHomeButtonTest()[pri:7, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyBackToHomeButtonTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.verifyPdfReceiptTest()[pri:8, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="verifyPdfReceiptTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.emptyAllFieldsTest(java.lang.String,java.lang.String,java.lang.String)[pri:9, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="emptyAllFieldsTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.emptyFirstNameTest(java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="emptyFirstNameTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+        <method signature="CheckoutFunctional_Test.emptyLastNameTest(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" name="emptyLastNameTest" class="ecomSwagLabsCheckout.CheckoutFunctional_Test"/>
+      </group> <!-- FT -->
+    </groups>
+    <test started-at="2026-10-12T10:49:57 IST" name="Default test" finished-at="2026-10-12T10:52:30 IST" duration-ms="153154">
+      <class name="ecomSwagLabsCheckout.CheckoutFunctional_Test">
+        <test-method is-config="true" signature="bs()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:49:57 IST" name="bs" finished-at="2026-10-12T10:49:57 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Open Database]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bs -->
+        <test-method is-config="true" signature="bt()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:49:57 IST" name="bt" finished-at="2026-10-12T10:49:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PreCondition]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bt -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:49:57 IST" name="bm" finished-at="2026-10-12T10:50:01 IST" duration-ms="4291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyCheckoutInformationTest()[pri:1, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:01 IST" name="verifyCheckoutInformationTest" finished-at="2026-10-12T10:50:05 IST" duration-ms="3826" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[First Name entered correctly: Swati]]>
+            </line>
+            <line>
+              <![CDATA[Last Name entered correctly: Sahu]]>
+            </line>
+            <line>
+              <![CDATA[Postal Code entered correctly: 123456]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCheckoutInformationTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:05 IST" name="am" finished-at="2026-10-12T10:50:05 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:05 IST" name="bm" finished-at="2026-10-12T10:50:09 IST" duration-ms="3407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyContinueButtonTest()[pri:2, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:09 IST" name="verifyContinueButtonTest" finished-at="2026-10-12T10:50:22 IST" duration-ms="13779" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Overview page is displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyContinueButtonTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:22 IST" name="am" finished-at="2026-10-12T10:50:23 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:23 IST" name="bm" finished-at="2026-10-12T10:50:26 IST" duration-ms="3414" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyCheckoutCancelButtonTest()[pri:3, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:26 IST" name="verifyCheckoutCancelButtonTest" finished-at="2026-10-12T10:50:29 IST" duration-ms="3453" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart page is displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCheckoutCancelButtonTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:29 IST" name="am" finished-at="2026-10-12T10:50:30 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:30 IST" name="bm" finished-at="2026-10-12T10:50:33 IST" duration-ms="3465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyOrderSummaryTest()[pri:4, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:33 IST" name="verifyOrderSummaryTest" finished-at="2026-10-12T10:50:47 IST" duration-ms="13752" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Payment Information:
+SauceCard #31337
+Shipping Information:
+Free Pony Express Delivery!
+Price Total
+Item total: $9.99
+Tax: $0.80
+Total: $10.79
+Cancel
+Finish]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderSummaryTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:47 IST" name="am" finished-at="2026-10-12T10:50:47 IST" duration-ms="190" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:47 IST" name="bm" finished-at="2026-10-12T10:50:50 IST" duration-ms="3335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyOverviewCancelButtonTest()[pri:5, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:50:50 IST" name="verifyOverviewCancelButtonTest" finished-at="2026-10-12T10:51:06 IST" duration-ms="15716" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[HomePage is displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOverviewCancelButtonTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:06 IST" name="am" finished-at="2026-10-12T10:51:06 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:06 IST" name="bm" finished-at="2026-10-12T10:51:10 IST" duration-ms="3368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyOrderConfirmationMessageTest()[pri:6, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:10 IST" name="verifyOrderConfirmationMessageTest" finished-at="2026-10-12T10:51:25 IST" duration-ms="15748" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Order Completed page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Thank you for your order!
+Your order has been dispatched, and will arrive just as fast as the pony can get there!
+Back Home
+Generate PDF order]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyOrderConfirmationMessageTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:25 IST" name="am" finished-at="2026-10-12T10:51:26 IST" duration-ms="183" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:26 IST" name="bm" finished-at="2026-10-12T10:51:29 IST" duration-ms="3263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyBackToHomeButtonTest()[pri:7, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:29 IST" name="verifyBackToHomeButtonTest" finished-at="2026-10-12T10:51:47 IST" duration-ms="17768" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Order Completed page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[HomePage is displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyBackToHomeButtonTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:47 IST" name="am" finished-at="2026-10-12T10:51:47 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:47 IST" name="bm" finished-at="2026-10-12T10:51:50 IST" duration-ms="3220" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="verifyPdfReceiptTest()[pri:8, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:51:50 IST" name="verifyPdfReceiptTest" finished-at="2026-10-12T10:52:08 IST" duration-ms="17926" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Order Completed page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Pdf is downloaded successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyPdfReceiptTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:08 IST" name="am" finished-at="2026-10-12T10:52:08 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:09 IST" name="bm" finished-at="2026-10-12T10:52:12 IST" duration-ms="3233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="emptyAllFieldsTest(java.lang.String,java.lang.String,java.lang.String)[pri:9, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:12 IST" name="emptyAllFieldsTest" data-provider="emptyAllFields" finished-at="2026-10-12T10:52:16 IST" duration-ms="3674" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[All-empty checkout validation verified]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyAllFieldsTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:16 IST" name="am" finished-at="2026-10-12T10:52:16 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:16 IST" name="bm" finished-at="2026-10-12T10:52:19 IST" duration-ms="3253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="emptyFirstNameTest(java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:19 IST" name="emptyFirstNameTest" data-provider="emptyFirstName" finished-at="2026-10-12T10:52:23 IST" duration-ms="3734" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bghbt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4545778]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Empty First Name validation verified]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyFirstNameTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:23 IST" name="am" finished-at="2026-10-12T10:52:23 IST" duration-ms="174" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="bm(java.lang.String)[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:23 IST" name="bm" finished-at="2026-10-12T10:52:26 IST" duration-ms="3249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Opening browser]]>
+            </line>
+            <line>
+              <![CDATA[Application launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bm -->
+        <test-method signature="emptyLastNameTest(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:26 IST" name="emptyLastNameTest" data-provider="emptyLastName" finished-at="2026-10-12T10:52:30 IST" duration-ms="3634" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gjmhjb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7544987]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+            <line>
+              <![CDATA[Your Cart]]>
+            </line>
+            <line>
+              <![CDATA[Cart page is opened]]>
+            </line>
+            <line>
+              <![CDATA[Checkout Information page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Empty Last Name validation verified]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- emptyLastNameTest -->
+        <test-method is-config="true" signature="am()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:30 IST" name="am" finished-at="2026-10-12T10:52:30 IST" duration-ms="149" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test completed]]>
+            </line>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- am -->
+        <test-method is-config="true" signature="at()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:30 IST" name="at" finished-at="2026-10-12T10:52:30 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[PostCondition]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- at -->
+        <test-method is-config="true" signature="as()[pri:0, instance:ecomSwagLabsCheckout.CheckoutFunctional_Test@6025e1b6]" started-at="2026-10-12T10:52:30 IST" name="as" finished-at="2026-10-12T10:52:30 IST" duration-ms="0" status="PASS">
+>>>>>>> refs/remotes/SwagLabsSprint/master
           <reporter-output>
             <line>
               <![CDATA[Close Database connectivity]]>
