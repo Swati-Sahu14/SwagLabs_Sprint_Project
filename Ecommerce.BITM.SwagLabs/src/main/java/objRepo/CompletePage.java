@@ -60,37 +60,49 @@ public class CompletePage {
 	    // Click the Generate PDF button
 	    pdfbtn.click();
 
-	    // Wait for the PDF download
-	    Thread.sleep(2000);
+	    // Use the same download folder configured in ChromeOptions
+	    String downloadPath = System.getProperty("user.dir")
+	            + File.separator + "downloads";
 
-	    // Locate the Downloads folder
-	    File folder = new File(System.getProperty("user.home") + "\\Downloads");
+	    File folder = new File(downloadPath);
 
-	    // Get the files in the Downloads folder
-	    File[] files = folder.listFiles();
-
+	    // Wait up to 30 seconds for the PDF to download
 	    boolean pdfFound = false;
+	    long endTime = System.currentTimeMillis() + 30000;
 
-	    // Check whether the folder is accessible
-	    if (files != null) {
+	    while (System.currentTimeMillis() < endTime) {
 
-	        for (File file : files) {
+	        File[] files = folder.listFiles();
 
-	            if (file.isFile() &&
-	                file.getName().toLowerCase().endsWith(".pdf")) {
+	        if (files != null) {
+	            for (File file : files) {
 
-	                pdfFound = true;
-	                System.out.println("PDF downloaded successfully: " + file.getName());
-	                break;
+	                if (file.isFile()
+	                        && file.getName().toLowerCase().endsWith(".pdf")
+	                        && file.length() > 0) {
+
+	                    // Ensure the PDF download is complete
+	                    File crdownload = new File(
+	                            downloadPath,
+	                            file.getName() + ".crdownload");
+
+	                    if (!crdownload.exists()) {
+	                        pdfFound = true;
+	                        System.out.println("PDF downloaded successfully: "+ file.getAbsolutePath());
+	                        break;
+	                    }
+	                }
 	            }
 	        }
 
-	    } else {
-	        System.out.println("Unable to read the Downloads folder.");
+	        if (pdfFound) {
+	            break;
+	        }
+	        Thread.sleep(1000);
 	    }
 
 	    // Verify the PDF download
-	    Assert.assertTrue(pdfFound,"PDF file was not downloaded successfully.");
+	    Assert.assertTrue(pdfFound,"PDF file was not downloaded successfully. Checked folder: "+ downloadPath);
 	}
 
 }
