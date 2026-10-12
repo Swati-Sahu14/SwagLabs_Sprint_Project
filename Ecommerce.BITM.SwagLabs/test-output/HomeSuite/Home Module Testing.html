@@ -1,0 +1,338 @@
+<html>
+<head>
+<title>TestNG:  Home Module Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Home Module Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 11 16:32:52 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>197 seconds (197188 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSystem_Test.verifyCompleteHomeFlow()'><b>verifyCompleteHomeFlow</b><br>Test class: ecomSwagLabsHome.HomeSystem_Test<br/>
+<a href="#Output-1405721353" onClick='toggleBox("Output-1405721353", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1405721353" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1405721353">
+Login successful<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Products are visible<br/>
+Products are added to cart<br/>
+All products are added to cart<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeSystem_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSmoke_Test.verifyInventoryRequiresLogin()'><b>verifyInventoryRequiresLogin</b><br>Test class: ecomSwagLabsHome.HomeSmoke_Test<br/>
+<a href="#Output-1498016680" onClick='toggleBox("Output-1498016680", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1498016680" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1498016680">
+Inventory access is blocked without login<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecomSwagLabsHome.HomeSmoke_Test@7586beff</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.verifyRemoveButtonState1()'><b>verifyRemoveButtonState1</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-1177852821" onClick='toggleBox("Output-1177852821", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1177852821" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1177852821">
+Login successful<br/>
+Remove buttons are not displayed before adding products<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeIntegration_Test.verifyHomeToCart()'><b>verifyHomeToCart</b><br>Test class: ecomSwagLabsHome.HomeIntegration_Test<br/>
+<a href="#Output-1938974193" onClick='toggleBox("Output-1938974193", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1938974193" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1938974193">
+Login successful<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.verifyAddAllProducts()'><b>verifyAddAllProducts</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-1689723487" onClick='toggleBox("Output-1689723487", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1689723487" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1689723487">
+Login successful<br/>
+Products are added to cart<br/>
+All products are added to cart<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeIntegration_Test.verifyCartWithoutAddingProduct()'><b>verifyCartWithoutAddingProduct</b><br>Test class: ecomSwagLabsHome.HomeIntegration_Test<br/>
+<a href="#Output-113676940" onClick='toggleBox("Output-113676940", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-113676940" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-113676940">
+Login successful<br/>
+Cart badge is not displayed<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Product is removed from the cart<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>ecomSwagLabsHome.HomeIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSystem_Test.verifyHomeWithoutLogin()'><b>verifyHomeWithoutLogin</b><br>Test class: ecomSwagLabsHome.HomeSystem_Test<br/>
+<a href="#Output-1898629094" onClick='toggleBox("Output-1898629094", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1898629094" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1898629094">
+Inventory access is blocked without login<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecomSwagLabsHome.HomeSystem_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.verifyProductsWithoutLogin()'><b>verifyProductsWithoutLogin</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-1612031141" onClick='toggleBox("Output-1612031141", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1612031141" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1612031141">
+Login successful<br/>
+Products are visible<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.verifyRemoveButtonState()'><b>verifyRemoveButtonState</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-508756323" onClick='toggleBox("Output-508756323", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-508756323" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-508756323">
+Login successful<br/>
+Remove buttons are not displayed before adding products<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.removeProductTest()'><b>removeProductTest</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-990830650" onClick='toggleBox("Output-990830650", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-990830650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-990830650">
+Login successful<br/>
+Products are removed from cart<br/>
+All products are removed<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSystem_Test.verifyHomeAfterLogout()'><b>verifyHomeAfterLogout</b><br>Test class: ecomSwagLabsHome.HomeSystem_Test<br/>
+<a href="#Output-584580417" onClick='toggleBox("Output-584580417", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-584580417" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-584580417">
+Login successful<br/>
+Logging out<br/>
+Logout successful<br/>
+Inventory access is blocked after logout<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeSystem_Test@7e6f74c</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeSmoke_Test.verifyHomePageLoads()'><b>verifyHomePageLoads</b><br>Test class: ecomSwagLabsHome.HomeSmoke_Test<br/>
+<a href="#Output-1925785585" onClick='toggleBox("Output-1925785585", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1925785585" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1925785585">
+Login successful<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Products are visible<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeSmoke_Test@7586beff</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.verifyProductsNotMissing()'><b>verifyProductsNotMissing</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-2070830098" onClick='toggleBox("Output-2070830098", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2070830098" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2070830098">
+Login successful<br/>
+Products are visible<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeFunctional_Test.verifyHomePageByMenuList()'><b>verifyHomePageByMenuList</b><br>Test class: ecomSwagLabsHome.HomeFunctional_Test<br/>
+<a href="#Output-1457148583" onClick='toggleBox("Output-1457148583", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1457148583" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1457148583">
+Login successful<br/>
+Home Page Title: Products<br/>
+Home Page is displayed<br/>
+Products are visible<br/>
+Home page contains menu items<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecomSwagLabsHome.HomeFunctional_Test@44c03695</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeIntegration_Test.verifySortingOptions()'><b>verifySortingOptions</b><br>Test class: ecomSwagLabsHome.HomeIntegration_Test<br/>
+<a href="#Output-2069545799" onClick='toggleBox("Output-2069545799", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2069545799" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2069545799">
+Login successful<br/>
+Sorted by Name (A to Z): Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket, Sauce Labs Onesie, Test.allTheThings() T-Shirt (Red)<br/>
+Sorted by Name (Z to A): Test.allTheThings() T-Shirt (Red), Sauce Labs Onesie, Sauce Labs Fleece Jacket, Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, Sauce Labs Backpack<br/>
+Sorted by Price (Low to high): $7.99, $9.99, $15.99, $15.99, $29.99, $49.99<br/>
+Sorted by Price (High to low): $49.99, $29.99, $15.99, $15.99, $9.99, $7.99<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecomSwagLabsHome.HomeIntegration_Test@dd05255</td></tr>
+<tr>
+<td title='ecomSwagLabsHome.HomeIntegration_Test.verifyProductRemovalIntegration()'><b>verifyProductRemovalIntegration</b><br>Test class: ecomSwagLabsHome.HomeIntegration_Test<br/>
+<a href="#Output-1311562833" onClick='toggleBox("Output-1311562833", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1311562833" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1311562833">
+Login successful<br/>
+Product removed from inventory<br/>
+Remove button is no longer displayed<br/>
+Your Cart<br/>
+Cart page is opened<br/>
+Product is removed from the cart<br/>
+Logging out<br/>
+Logout successful<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>ecomSwagLabsHome.HomeIntegration_Test@dd05255</td></tr>
+</table><p>
+</body>
+</html>

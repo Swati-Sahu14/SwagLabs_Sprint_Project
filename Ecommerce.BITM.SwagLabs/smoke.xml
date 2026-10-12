@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="SmokeSuite">
-        <groups>
+
+	<test name="Smoke Testing">
+	    <groups>
             <run>
                 <include name="SM"/>
             </run>
         </groups>
-	<test name="SmokeTests">
         <packages>
             <package name="ecomSwagLabsLogin"/>
    			<package name="ecomSwagLabsHome"/>

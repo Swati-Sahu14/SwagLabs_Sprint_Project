@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="AllModules_CrossBrowser">
+<suite name="CrossBrowserTesting">
 
     <!-- Chrome -->
-    <test name="Chrome_All_Modules">
+    <test name="Cross Browser Testing in Chrome">
         <parameter name="browser" value="chrome"/>
+        
         <packages>
             <package name="ecomSwagLabsLogin"/>
             <package name="ecomSwagLabsHome"/>
@@ -16,7 +17,7 @@
     </test>
 
     <!-- Edge -->
-    <test name="Edge_All_Modules">
+    <test name="Cross Browser Testing in Edge">
         <parameter name="browser" value="edge"/>
         <packages>
             <package name="ecomSwagLabsLogin"/>
@@ -28,7 +29,7 @@
     </test>
 
     <!-- Firefox -->
-    <test name="Firefox_All_Modules">
+    <test name="Cross Browser Testing in firefox">
         <parameter name="browser" value="firefox"/>
         <packages>
             <package name="ecomSwagLabsLogin"/>

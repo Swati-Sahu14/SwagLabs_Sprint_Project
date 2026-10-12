@@ -17,7 +17,7 @@ public class HomeIntegration_Test extends BaseClass {
     public void verifyHomeToCart() throws Exception {
         login();
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getTitle();
         h.getAddItemToCart();
         h.getCart();
@@ -30,7 +30,7 @@ public class HomeIntegration_Test extends BaseClass {
     public void verifySortingOptions() throws Exception {
         login();
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getFilter("Name (A to Z)");
         h.printProductNames("A to Z");
         h.getFilter("Name (Z to A)");
@@ -47,13 +47,13 @@ public class HomeIntegration_Test extends BaseClass {
     public void verifyCartWithoutAddingProduct() throws Exception {
     	 login();
 
-         HomePage h = new HomePage(d);
+         HomePage h = new HomePage(driver);
          h.verifyCartBadgeNotDisplayed();
          h.getCart();
 
-         CartPage c = new CartPage(d);
+         CartPage c = new CartPage(driver);
          c.verifyProductRemoved();
-         ScreenshotUtility.takeScreenshot(d, "Cart_Empty");
+         ScreenshotUtility.takeScreenshot(driver, "Cart_Empty");
          logout();
 
     }
@@ -63,14 +63,14 @@ public class HomeIntegration_Test extends BaseClass {
     public void verifyProductRemovalIntegration() throws Exception {
     	login();
 
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.removeProductFromInventory();
         h.verifyRemoveButtonNotDisplayed();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.verifyProductRemoved();
-        ScreenshotUtility.takeScreenshot(d, "Product_Removed");
+        ScreenshotUtility.takeScreenshot(driver, "Product_Removed");
         logout();
 
     }

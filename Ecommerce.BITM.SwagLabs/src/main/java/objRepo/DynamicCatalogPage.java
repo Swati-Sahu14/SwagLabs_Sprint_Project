@@ -24,6 +24,7 @@ public class DynamicCatalogPage {
     WebDriverWait wait;
     JavaScriptUtility js;
 
+    // Constructor to initialize WebDriver, PageFactory, explicit wait, and JavaScript utility
     public DynamicCatalogPage(WebDriver d) {
         this.d = d;
         this.wait = new WebDriverWait(d, java.time.Duration.ofSeconds(10));
@@ -31,7 +32,7 @@ public class DynamicCatalogPage {
         js = new JavaScriptUtility(d);
     }
 
-
+    // Locators for Dynamic Catalog navigation options
     @FindBy(id = "dynamic_catalog_sidebar_link")
     private WebElement dynamicCatalog;
 
@@ -59,40 +60,47 @@ public class DynamicCatalogPage {
     @FindBy(id = "inventory_sidebar_link")
     private WebElement allItems;
     
+    // Navigates back to the All Items page
     public void getallItems() throws InterruptedException {
     	allItems.click();
     	Thread.sleep(2000);
     }
 
+    // Opens the Dynamic Catalog section
 	public void getDynamicCatalog() throws InterruptedException {
 		dynamicCatalog.click();
 		Thread.sleep(600);
 		Reporter.log("Dynamic Catalog is opened", true);
 	}
 
+	// Opens the Lazy Load page
 	public void getLazyLoad() throws InterruptedException {
 		lazyLoad.click();
 		Thread.sleep(2000);
 		Reporter.log("Lazy Load is opened", true);
 	}
 
+	// Opens the Spinner page
 	public void getSpinner() throws InterruptedException {
 		spinner.click();
 		Thread.sleep(2000);
 		Reporter.log("Spinner is opened", true);
 	}
 
+	// Opens the Slider page
 	public void getSlider() throws InterruptedException {
 		slider.click();
 		Thread.sleep(2000);
 		Reporter.log("Slider is opened", true);
 	}
 
+	// Retrieves and logs the product details displayed on the Spinner page
 	public void getProducts_spinner() {
 		for(WebElement ele :products_spinner)
 			Reporter.log(ele.getText(), true);
 	}
 
+	// Navigates through each slider dot and verifies that its product is displayed
 	public void getProducts_slider() throws InterruptedException {
 		for (int i = 0; i < sliderDots.size(); i++) {
 	        sliderDots.get(i).click();
@@ -104,21 +112,25 @@ public class DynamicCatalogPage {
 	    Reporter.log("All slider products are displayed successfully", true);
 	}
 
+	// Verifies that Lazy Load products are displayed
 	public void verifyLazyLoadProducts() {
         Assert.assertTrue(products_Lazy.size() > 0,"Lazy Load products are not displayed");
         Reporter.log("Lazy Load products displayed",true);
     }
 	
+	// Verifies that Spinner product cards are displayed
 	 public void verifySpinnerProducts() {
 	     Assert.assertTrue(products_spinner.size() > 0,"Spinner products are not displayed");
 	     Reporter.log("Spinner products displayed",true);
 	  }
 
+	// Verifies that Slider products are displayed
 	 public void verifySliderProducts() {
 	     Assert.assertTrue(products_slider.size() > 0,"Slider products are not displayed");
 	     Reporter.log("Slider products displayed",true);
 	 }
 	 
+	 // Verifies that slider navigation dots are visible, enabled, and unique
 	 public void verifySliderDots() {
 		    Assert.assertTrue(sliderDots.size() > 0,"Slider navigation dots are not displayed");
 		    Set<String> dotIdentifiers = new HashSet<>();
@@ -130,25 +142,28 @@ public class DynamicCatalogPage {
 		    }
 		    Reporter.log("Slider dots are displayed, enabled, and unique",true);
 	}
+	 
+	// Verifies that slider navigation dots are absent on the All Items page
 	 public void verifyAllItemsWithoutSliderDots() {
 		    Assert.assertTrue(d.getCurrentUrl().contains("inventory.html"),"All Items page was not opened");
 		    Assert.assertEquals(sliderDots.size(),0,"Slider navigation dots are still displayed on All Items");
 		    Reporter.log("Slider elements are not displayed on All Items",true);
 	 }
+	 
+	// Verifies that the Spinner page displays no more than six product cards
 	 public void verifySpinnerProductLimit() {
 		    Assert.assertTrue(products_spinner.size() <= 6,"Spinner page displays more than six product cards");
 		    Reporter.log("Spinner page does not display more than six product cards",true);
 	 }
 
 
+	// Verifies that products remain available after repeated scrolling
 	 public void verifyRepeatedScrollStability() throws InterruptedException {
-
 	     for (int i = 1; i <= 5; i++) {
 	         ((org.openqa.selenium.JavascriptExecutor) d).executeScript("window.scrollTo(0, document.body.scrollHeight);");
 	         Thread.sleep(1000);
 	         Assert.assertTrue(products_Lazy.size() > 0,"Products disappeared during repeated scrolling");
-	         Reporter.log("Products remain available after scroll " + i,true
-	     );
+	         Reporter.log("Products remain available after scroll " + i,true);
 	     }
 	     Reporter.log("Repeated scrolling completed successfully", true);
 	 }
@@ -157,20 +172,16 @@ public class DynamicCatalogPage {
 	 private WebElement loginButton;
 
 	
+	 // Verifies that a logged-out user is redirected to the login page
 	 public void verifyCatalogAccessAfterLogout() throws IOException {
-
 	     d.get(PropertyFileUtility.getDataFromProperty("url") + "inventory.html");
-
 	     wait.until(ExpectedConditions.visibilityOf(loginButton));
-
-	     Assert.assertTrue(
-	         loginButton.isDisplayed(),
-	         "Logged-out user was not redirected to login"
-	     );
-
+	     Assert.assertTrue(loginButton.isDisplayed(),"Logged-out user was not redirected to login");
 	     Reporter.log("Catalog is not accessible after logout", true);
 	 }
 	 
+	 
+	// Verifies that Lazy Load products remain displayed after scrolling
 	 public void verifyLazyLoadOnScroll() throws InterruptedException {
 		 for (int i = 1; i <= 5; i++) {
 		        js.scrollDown(700);

@@ -20,8 +20,9 @@ import objRepo.LogoutPage;
 
 public class BaseClass {
 
-    public WebDriver d;
-
+	// Controls the browser
+	public WebDriver driver;
+	
     @BeforeSuite(alwaysRun = true)
     public void bs() {
         Reporter.log("Open Database", true);
@@ -42,14 +43,15 @@ public class BaseClass {
         Reporter.log("PostCondition", true);
     }
 
+    // Launches the specified browser and opens the application before every test method
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
     public void bm(@Optional("chrome") String browser) throws IOException, InterruptedException {
-
+    	
         Reporter.log("Opening browser", true);
         System.out.println("Browser received: " + browser);
-        d = WebdriverUtility.launchbrowser(browser);
-        d.get(PropertyFileUtility.getDataFromProperty("url"));
+        driver = WebdriverUtility.launchbrowser(browser);
+        driver.get(PropertyFileUtility.getDataFromProperty("url"));
         Thread.sleep(2000);
         Reporter.log("Application launched", true);
     }
@@ -57,26 +59,28 @@ public class BaseClass {
     @AfterMethod(alwaysRun = true)
     public void am() {
         Reporter.log("Test completed", true);
-        if (d != null) {
-            d.quit();
-            d = null;
+        if (driver != null) {
+            driver.quit();
+            driver = null;
             Reporter.log("Browser closed", true);
         }
     }
-
+    
+    // Reusable method to log in to the application
     public void login() throws IOException, InterruptedException {
-        LoginPage l = new LoginPage(d);
+        LoginPage l = new LoginPage(driver);
         l.getUsername(PropertyFileUtility.getDataFromProperty("username"));
         l.getPassword(PropertyFileUtility.getDataFromProperty("password"));
         l.getLogin();
         Thread.sleep(3000);
         Reporter.log("Login successful", true);
     }
-
+    
+    // Reusable method to log out of the application
     public void logout() throws InterruptedException {
 
         Reporter.log("Logging out", true);
-        LogoutPage l = new LogoutPage(d);
+        LogoutPage l = new LogoutPage(driver);
         l.getMenu();
         Thread.sleep(2000);
         l.getLogout();

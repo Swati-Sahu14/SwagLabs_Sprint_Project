@@ -12,12 +12,14 @@ import org.testng.Reporter;
 public class CompletePage {
 
 	WebDriver d;
+	// Constructor to initialize WebDriver and PageFactory
 	public CompletePage(WebDriver d)
 	{
 		this.d = d;
 		PageFactory.initElements(d,this);
 	}
 	
+	// Locators for the checkout completion page elements
 	@FindBy(xpath = "//span[@class='title']")
 	private WebElement OrderTitle;
 
@@ -30,7 +32,7 @@ public class CompletePage {
 	@FindBy(id = "generate-pdf-order")
 	private WebElement pdfbtn;
 	
-	
+	// Verifies the checkout completion page title
 	public void getOrderTitle() {
 		String title = OrderTitle.getText();
 		Reporter.log("Order Title: "+title,true);
@@ -38,12 +40,14 @@ public class CompletePage {
 		Reporter.log("Order Complete page is displayed",true);
 	}
 
+	// Verifies the order confirmation message
 	public void getMessage() {
 		String m = message.getText();
 		Reporter.log(m,true);
 		Assert.assertTrue(m.contains("Thank you for your order!"),"Order confirmation message is incorrect");
 	}
 
+	// Navigates back to the home page and verifies the URL
 	public void getBackToHomebtn() throws InterruptedException {
 		backToHomebtn.click();
 		Thread.sleep(2000);
@@ -51,21 +55,21 @@ public class CompletePage {
 		Reporter.log("HomePage is displayed",true);
 	}
 
-	public void getPdfbtn() throws InterruptedException {
-		pdfbtn.click();
-		Thread.sleep(2000);
-		File folder = new File(System.getProperty("user.home") + "\\Downloads");
-		File[] files = folder.listFiles();
-		boolean pdfFound = false;
-		for (File file : files) {
-			if (file.getName().endsWith(".pdf")) {
-		        pdfFound = true;
-		        break;
-		    }
-		}
-		Assert.assertTrue(pdfFound, "PDF is not generated");
-		Reporter.log("Pdf is downloaded successfully" , true);
-	}
-	
-	
+	// Downloads the order PDF and verifies that a PDF file exists
+	public void getPdfbtn() {
+	    pdfbtn.click();
+	    File folder = new File(System.getProperty("user.home"), "Downloads");
+	    Assert.assertTrue(folder.exists() && folder.isDirectory(),"Downloads folder does not exist: " + folder.getAbsolutePath());
+	    File[] files = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".pdf"));
+	    Assert.assertNotNull(files,"Unable to access the Downloads folder: " + folder.getAbsolutePath());
+	    boolean pdfFound = false;
+	    for (File file : files) {
+	        if (file.isFile()) {
+	            pdfFound = true;
+	            break;
+	        }
+	    }
+	    Assert.assertTrue(pdfFound, "PDF is not generated in the Downloads folder");
+	    Reporter.log("PDF is downloaded successfully", true);
+	}	
 }

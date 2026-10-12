@@ -43,90 +43,56 @@ public class CartPage {
 
     // Verify that the Cart page is displayed.
     public void getCarttitle() {
-        String actualTitle = wait.until(
-            ExpectedConditions.visibilityOf(CartTitle)
-        ).getText();
-
-        Assert.assertEquals(
-            actualTitle,
-            "Your Cart",
-            "Cart page is not displayed"
-        );
-
+        String actualTitle = wait.until(ExpectedConditions.visibilityOf(CartTitle)).getText();
+        Assert.assertEquals(actualTitle,"Your Cart","Cart page is not displayed");
         Reporter.log("Cart page is displayed", true);
     }
 
     // Remove a product from the cart.
     public void getRemovebtn() {
-        wait.until(
-            ExpectedConditions.elementToBeClickable(removebtn)
-        ).click();
+        wait.until(ExpectedConditions.elementToBeClickable(removebtn)).click();
     }
 
     // Return to the Products page.
     public void getContinueShopping() {
-        wait.until(
-            ExpectedConditions.elementToBeClickable(continueShopping)
-        ).click();
-
-        wait.until(
-            ExpectedConditions.urlContains("inventory.html")
-        );
+        wait.until(ExpectedConditions.elementToBeClickable(continueShopping)).click();
+        wait.until(ExpectedConditions.urlContains("inventory.html"));
     }
 
     // Retrieve the product name from the cart.
     public String getProductName() {
-        String cartProductName = wait.until(
-            ExpectedConditions.visibilityOf(CartProductName)
-        ).getText();
-
+        String cartProductName = wait.until(ExpectedConditions.visibilityOf(CartProductName)).getText();
         Reporter.log("Cart product: " + cartProductName, true);
         return cartProductName;
     }
 
     // Verify that products are present in the cart.
     public void verifyProductsInCart() {
-        wait.until(
-            ExpectedConditions.visibilityOf(CartTitle)
-        );
-
-        Assert.assertTrue(
-            cartProducts.size() > 0,
-            "Products are not present in the cart"
-        );
-
-        Reporter.log(
-            "Number of products in cart: " + cartProducts.size(),
-            true
-        );
+        wait.until(ExpectedConditions.visibilityOf(CartTitle));
+        Assert.assertTrue(cartProducts.size() > 0,"Products are not present in the cart");
+        Reporter.log("Number of products in cart: " + cartProducts.size(),true);
     }
 
     // Verify that the cart is empty.
     public void verifyProductRemoved() {
-        Assert.assertEquals(
-            cartProducts.size(),
-            0,
-            "Product is still present in the cart"
-        );
-
+        Assert.assertEquals(cartProducts.size(),0,"Product is still present in the cart");
         Reporter.log("Product is removed from the cart", true);
     }
 
- // Navigate to Checkout Information page
-    public void getCheckoutbtn() {
-        
+    // Navigate to Checkout Information page
+    public void getCheckoutbtn() { 
         wait.until(ExpectedConditions.elementToBeClickable(checkoutbtn)).click();
-
         wait.until(ExpectedConditions.urlContains("checkout-step-one.html"));
-
         Reporter.log("Checkout Information page is displayed", true);
     }
     
+    // Verifies that the cart is empty
     public void verifyCartEmpty() {
 	    Assert.assertEquals(cartProducts.size(),0,"Precondition failed: cart is not empty");
 	    Reporter.log("Cart is empty", true);
 	}
-
+    
+    // Refreshes the page and verifies that removed products do not reappear
 	public void refreshAndVerifyCartEmpty() throws InterruptedException {
 	    d.navigate().refresh();
 	    Thread.sleep(2000);

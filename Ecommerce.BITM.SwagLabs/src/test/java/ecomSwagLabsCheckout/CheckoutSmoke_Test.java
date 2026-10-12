@@ -18,23 +18,23 @@ public class CheckoutSmoke_Test extends BaseClass {
     @Test(groups = {"SM", "Pos"})
     public void basicTest() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getTitle();
         h.getAddItemToCart();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getProductName();
         c.getCheckoutbtn();
-        CheckoutPage cop = new CheckoutPage(d);
+        CheckoutPage cop = new CheckoutPage(driver);
         cop.getFn(PropertyFileUtility.getDataFromProperty("FirstName"));
         cop.getLn(PropertyFileUtility.getDataFromProperty("LastName"));
         cop.getPCode(PropertyFileUtility.getDataFromProperty("Zip_code"));
         cop.getContinuebtn();
         cop.verifyContinuebtn();
-        OverviewPage op = new OverviewPage(d);
+        OverviewPage op = new OverviewPage(driver);
         op.getSummary();
         op.getFinishbtn();
-        CompletePage cp = new CompletePage(d);
+        CompletePage cp = new CompletePage(driver);
         cp.getMessage();
         cp.getBackToHomebtn();
         logout();
@@ -44,16 +44,16 @@ public class CheckoutSmoke_Test extends BaseClass {
     @Test(groups = {"SM", "Neg"})
     public void checkoutMustRejectEmptyInformation() throws Exception {
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getAddItemToCart();
         h.getCart();
-        CartPage c = new CartPage(d);
+        CartPage c = new CartPage(driver);
         c.getCheckoutbtn();
-        CheckoutPage cop = new CheckoutPage(d);
+        CheckoutPage cop = new CheckoutPage(driver);
         cop.getContinuebtn();
         String errorMessage = cop.getErrorMessage();
         Assert.assertTrue(errorMessage.contains("First Name is required"),"Empty checkout information was not rejected");
-        Assert.assertTrue(d.getCurrentUrl().contains("checkout-step-one.html"),"Checkout moved forward despite invalid information");
+        Assert.assertTrue(driver.getCurrentUrl().contains("checkout-step-one.html"),"Checkout moved forward despite invalid information");
         Reporter.log("Checkout correctly rejected empty customer information", true);
     }
 }

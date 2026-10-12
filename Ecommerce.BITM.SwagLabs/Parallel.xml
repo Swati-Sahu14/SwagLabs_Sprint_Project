@@ -3,7 +3,7 @@
 
 <suite name="ParallelSuite" parallel="classes" thread-count="5">
 
-    <test name="ParallelTests">
+    <test name="Parallel Testing">
 
         <packages>
             <package name="ecomSwagLabsLogin"/>

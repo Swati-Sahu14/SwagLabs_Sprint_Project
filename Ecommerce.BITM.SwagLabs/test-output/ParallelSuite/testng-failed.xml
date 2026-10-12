@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [ParallelSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Parallel Testing(failed)">
+    <classes>
+      <class name="ecomSwagLabsHome.HomeIntegration_Test">
+        <methods>
+          <include name="verifySortingOptions"/>
+          <include name="bm"/>
+          <include name="am"/>
+          <include name="verifyProductRemovalIntegration"/>
+          <include name="verifyCartWithoutAddingProduct"/>
+          <include name="at"/>
+          <include name="bs"/>
+          <include name="bt"/>
+          <include name="as"/>
+        </methods>
+      </class> <!-- ecomSwagLabsHome.HomeIntegration_Test -->
+      <class name="ecomSwagLabsHome.HomeSmoke_Test">
+        <methods>
+          <include name="bm"/>
+          <include name="am"/>
+          <include name="at"/>
+          <include name="bs"/>
+          <include name="verifyInventoryRequiresLogin"/>
+          <include name="bt"/>
+          <include name="as"/>
+        </methods>
+      </class> <!-- ecomSwagLabsHome.HomeSmoke_Test -->
+      <class name="ecomSwagLabsCheckout.CheckoutIntegrationTest">
+        <methods>
+          <include name="bm"/>
+          <include name="am"/>
+          <include name="verifyCheckoutToOverviewTest"/>
+          <include name="at"/>
+          <include name="verifyHomeToCartProductConsistencyTest"/>
+          <include name="verifyCheckoutToLogoutTest"/>
+          <include name="bs"/>
+          <include name="verifyCompleteToHomeTest"/>
+          <include name="bt"/>
+          <include name="as"/>
+          <include name="verifyOrderToDynamicCatalogTest"/>
+          <include name="invalidCheckoutMustNotOpenOverview"/>
+          <include name="verifyOverviewToCompleteTest"/>
+        </methods>
+      </class> <!-- ecomSwagLabsCheckout.CheckoutIntegrationTest -->
+      <class name="ecomSwagLabsHome.HomeFunctional_Test">
+        <methods>
+          <include name="bm"/>
+          <include name="am"/>
+          <include name="verifyProductsWithoutLogin"/>
+          <include name="verifyRemoveButtonState1"/>
+          <include name="verifyProductsNotMissing"/>
+          <include name="verifyAddAllProducts"/>
+          <include name="at"/>
+          <include name="verifyRemoveButtonState"/>
+          <include name="bs"/>
+          <include name="bt"/>
+          <include name="as"/>
+        </methods>
+      </class> <!-- ecomSwagLabsHome.HomeFunctional_Test -->
+    </classes>
+  </test> <!-- Parallel Testing(failed) -->
+</suite> <!-- Failed suite [ParallelSuite] -->

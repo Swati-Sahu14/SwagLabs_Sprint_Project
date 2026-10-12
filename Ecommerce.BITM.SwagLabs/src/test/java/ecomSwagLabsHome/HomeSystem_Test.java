@@ -19,27 +19,27 @@ public class HomeSystem_Test extends BaseClass {
     public void verifyCompleteHomeFlow() throws Exception {
 
         login();
-        HomePage h = new HomePage(d);
+        HomePage h = new HomePage(driver);
         h.getTitle();
         h.getProducts();
         h.addAllProductsToCart();
         h.verifyProductsAdded();
         h.getCart();
 
-        Assert.assertTrue(d.getCurrentUrl().contains("cart.html"),"Cart page was not opened");
+        Assert.assertTrue(driver.getCurrentUrl().contains("cart.html"),"Cart page was not opened");
         logout();
     }
 
     // Verify that inventory is inaccessible without login
     @Test(priority = 2, groups = {"ST", "Neg"})
     public void verifyHomeWithoutLogin() throws IOException {
-    	d.get(PropertyFileUtility.getDataFromProperty("url") + "cart.html");
+    	driver.get(PropertyFileUtility.getDataFromProperty("url") + "cart.html");
 
-        Negative_HomePage h = new Negative_HomePage(d);
+        Negative_HomePage h = new Negative_HomePage(driver);
         Assert.assertFalse(h.isHomePageDisplayed(),"Inventory is accessible without login");
         Assert.assertTrue( h.isLoginPageDisplayed(),"Login page was not displayed");
         Reporter.log("Inventory access is blocked without login", true);
-        ScreenshotUtility.takeScreenshot(d, "InventoryAccess_WithoutLogin");
+        ScreenshotUtility.takeScreenshot(driver, "InventoryAccess_WithoutLogin");
     }
 
     // Verify that inventory remains inaccessible after logout
@@ -48,11 +48,11 @@ public class HomeSystem_Test extends BaseClass {
 
         login();
         logout();
-        d.get(PropertyFileUtility.getDataFromProperty("url") + "cart.html");
-        Negative_HomePage h = new Negative_HomePage(d);
+        driver.get(PropertyFileUtility.getDataFromProperty("url") + "cart.html");
+        Negative_HomePage h = new Negative_HomePage(driver);
         Assert.assertFalse(h.isHomePageDisplayed(),"Inventory is accessible after logout");
         Assert.assertTrue( h.isLoginPageDisplayed(),"Login page was not displayed after logout");
         Reporter.log("Inventory access is blocked after logout", true);
-        ScreenshotUtility.takeScreenshot(d, "InventoryAccess_AfterLogout");
+        ScreenshotUtility.takeScreenshot(driver, "InventoryAccess_AfterLogout");
     }
 }
